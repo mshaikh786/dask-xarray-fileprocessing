@@ -21,7 +21,7 @@ print(ytmp)
 
 
 
-os.system('rm -rf %s/*'%(os.environ['RESULTS_DIR'])
+os.system('rm -rf %s/*'%(os.environ['RESULTS_DIR']))
 
 
 paths=list()

@@ -21,7 +21,8 @@ user=$(whoami)
 submit_host=${SLURM_SUBMIT_HOST}
 
 
-export DATA_DIR=/scratch/shaima0d/dask/user_codes/big_data_1
+#export DATA_DIR=/scratch/shaima0d/dask/user_codes/big_data_1
+export DATA_DIR=/scratch/shaima0d/dask/user_codes/test_data_v2
 export RESULTS_DIR=/scratch/shaima0d/dask/results/
 mkdir -p $RESULTS_DIR
 
