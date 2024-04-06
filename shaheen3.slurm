@@ -22,6 +22,8 @@ submit_host=${SLURM_SUBMIT_HOST}
 
 
 export DATA_DIR=/scratch/shaima0d/dask/user_codes/big_data_1
+export RESULTS_DIR=/scratch/shaima0d/dask/results/
+mkdir -p $RESULTS_DIR
 
 
 
@@ -35,7 +37,9 @@ dask-mpi  --nthreads ${SLURM_CPUS_PER_TASK} \
 		--worker-class distributed.Worker &
 
 echo "
-ssh -L 10000:${node}:10000 -L 10001:${node}:10001 shaima0d@${submit_host}.hpc.kaust.edu.sa
+To connect to the Dask Dashboard, copy the following line and paste in new termial, then using URL in a browser : localhost:10001 
+
+ssh -L 10001:${node}:10001 ${user}@${submit_host}.hpc.kaust.edu.sa
 "
 
 
